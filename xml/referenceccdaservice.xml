@@ -1,0 +1,27 @@
+<!--
+This file stubs the necessary configuration to run the Reference CCDA application in a tomcat instance.
+
+MUST DO
+1. Update the value attributes with the correct values for your deployment.
+2. This file MUST be placed in $CATALINA_BASE/conf/[enginename]/[hostname]/ . For example, tomcatlocation\conf\Catalina\localhost
+
+OPTIONAL
+Save a backup of this completed configuration file
+-->
+
+<Context reloadable="true">
+    <Parameter name="vocabulary.localCodeRepositoryDir" value="/etc/ccda/files/validator_configuration/vocabulary/code_repository" override="true"/>
+    <Parameter name="vocabulary.localValueSetRepositoryDir" value="/etc/ccda/files/validator_configuration/vocabulary/valueset_repository" override="true"/>
+    <Parameter name="referenceccda.configFile" value="/etc/ccda/files/configs_folder/ccdaReferenceValidatorConfig.xml" override="true"/>
+    <Parameter name="referenceccda.isDynamicVocab" value="false" override="true"/>
+    <Parameter name="referenceccda.configFolder" value="/etc/ccda/files/configs_folder" override="true"/>
+    <Parameter name="content.scenariosDir" value="/etc/ccda/files/validator_configuration/scenarios_directory" override="true"/>
+
+    <Parameter name="keycloak.enabled" value="false" override="true"/>
+    <Parameter name="keycloak.auth.server" value="Replace with KeyCloak auth URL" override="true"/>
+    <Parameter name="keycloak.realm" value="Replace with KeyCloak Realm" override="true"/>
+    <Parameter name="keycloak.client.id" value="Replace with KeyCloak client id for introspect" override="true"/>
+    <Parameter name="keycloak.client.secret" value="Replace with KeyCloak client secret for introspect" override="true"/>
+	
+	
+</Context>
